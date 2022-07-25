@@ -1,0 +1,35 @@
+<div class="fondo-page page-content ">
+   <div class="row mx-0 h-100 p-2">
+    <div class="col-12 d-flex justify-content-center align-items-center" ngif >
+        <div class="container-information d-flex flex-column justify-content-center align-items-center p-2">
+            <ng-container *ngIf="section === 0">
+                <img src="../../../assets/images/gender.png" class="icon-gender">
+                <p>Selección de género</p>
+                <select class="form-control form-control-sm mb-2" [(ngModel)]="gender">
+                    <option value="" selected>Seleccionar:</option>
+                    <option value="dama">Dama</option>
+                    <option value="caballero">Caballero</option>
+                    <option value="unisex">Unisex</option>
+                </select>
+            </ng-container>
+            <ng-container *ngIf="section === 1">
+                <p>Selección de horario</p>
+                <div class="d-flex p-2">
+                    <button [ngClass]="{'btn-hour-active':hour=='Dia'}" (click)="hour='Dia'" class="btn btn-hour p-2 d-flex flex-column align-items-center justify-content-center">
+                        <img src="../../../assets/images/sun.png" alt="">
+                        <small class="mt-1">Dia</small>
+                    </button>
+                    <button [ngClass]="{'btn-hour-active':hour=='Noche'}" (click)="hour='Noche'" class="btn btn-hour p-2 ms-3 d-flex flex-column align-items-center justify-content-center">
+                        <img src="../../../assets/images/moon.png" alt="">
+                        <small class="mt-1">Noche</small>
+                    </button>
+                </div>
+            </ng-container>
+            <div class="d-flex justify-content-center w-100">
+                <button class="btn btn-sm btn-next" *ngIf="section > 0" (click)="section=section-1"><i class="material-icons-outlined p-1">chevron_left</i></button>
+                <button class="btn btn-sm btn-next ms-3" (click)="nextOption()"><i class="material-icons-outlined p-1">chevron_right</i></button>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>

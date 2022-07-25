@@ -1,0 +1,49 @@
+.fondo-page{
+    background-image:url("../../../assets/images/marmol-negro.png");
+   
+
+    & .container-information{
+        width: 50%;
+        height: 60%;
+        color: white;
+        border-radius: 8px;
+        background: #0000009e;
+        border: 1px solid #ffffff52;
+        & .icon-gender{
+            height: 3rem;
+        }
+        & select{
+            width: 50%;
+            color: white;
+            background: black;
+            border: 1px solid #ffffff52;
+        }
+        .btn-next{
+            display: flex;
+            width:6rem;
+            color: white;
+            font-size: 0.9rem;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ffffff52;
+            & i{
+                font-size: 0.9rem;
+            }
+        }
+        .btn-hour{
+            color: white;
+            width: 6.2rem;
+            background: black;
+            border: 1px solid #ffffff52;
+        }
+        & .btn-hour:hover, .btn-hour:active,.btn-hour:focus, .btn-hour-active{
+            color: black;
+            background: #ffffff6e;
+            & img{
+
+                filter: invert(1) sepia(4%) contrast(5);
+            }
+
+        }
+    }
+}
